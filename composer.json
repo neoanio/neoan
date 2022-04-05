@@ -1,0 +1,23 @@
+{
+    "name": "neoanio/neoan",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Stefan Röhrl",
+            "email": "stefan.roehrl@gmail.com"
+        },
+        {
+            "name": "Marco Hochmuth",
+            "email": "marco.hochmuth@marcodes.dev"
+        }
+    ],
+    "require": {
+        "neoanio/framework": "^4.0"
+    }
+}

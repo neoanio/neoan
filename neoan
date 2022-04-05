@@ -1,0 +1,51 @@
+#!/usr/bin/env php
+<?php
+
+/*
+ *  Welcome To Neoan
+ *
+ *  This application is build with the Neoan PHP framework, which produces
+ *  the most reliable and maintainable applications in the world. It is an
+ *  easy to use foundation but a very powerful backbone of our application.
+ */
+
+define('NEOAN_START', microtime(true));
+
+/*
+ *  Require Composer's Autoloader
+ *
+ *  Composer provides us with an automatically generated class loader file
+ *  for our application. We just need to use it! Once we have required the
+ *  autoloader here, we no longer need to load any of our classes manually.
+ */
+
+require_once __DIR__ . '/vendor/autoload.php';
+
+/*
+ *  Boot the Neoan Framework
+ *
+ *  It is time to load the core of the framework. After that, we will have
+ *  an easy life building great applications. This is going to be the last
+ *  time we manually require files during the execution of our application.
+ */
+
+$core = new Neoan\Framework\Foundation\Core(
+    basePath: __DIR__
+);
+
+/*
+ *  Run The Console Application
+ *
+ *  This file serves as entry point for the command line interface for our
+ *  console application. We let the core make a console application handle
+ *  the input and output. Then we can exit the script with the status code.
+ */
+
+$app = $core->new(Neoan\Framework\Console\Application::class);
+
+$status = $app->handle(
+    input: new Neoan\Framework\Console\Input,
+    output: new Neoan\Framework\Console\Output,
+);
+
+exit($status);
