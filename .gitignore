@@ -1,4 +1,10 @@
 /.idea/
 /.vscode/
+
+/logs/
 /vendor/
+
+composer.phar
+composer.lock
+
 .env

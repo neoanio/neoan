@@ -40,6 +40,7 @@ $core = new Neoan\Framework\Foundation\Core(
  *  the incoming request. Then we can send the response back to the client.
  */
 
+/** @var \Neoan\Framework\Http\Application $app */
 $app = $core->new(Neoan\Framework\Http\Application::class);
 
 $request = new Neoan\Framework\Http\Request(
